@@ -1,0 +1,5 @@
+name: "shared_memory"
+author: "Wyccotccy"
+desc: "跨会话记忆共享插件，支持私聊与群聊互通，实现用户间记忆共享或隔离"
+version: "1.0.0"
+repo: "https://github.com/Wyccotccy/astrbot_plugins_shared_memory/"
