@@ -1,0 +1,58 @@
+{
+  "max_history": {
+    "description": "每个记忆池最大存储的消息条数",
+    "type": "int",
+    "default": 15,
+    "hint": "当超过此数量时，最旧的消息会被自动删除"
+  },
+  "storage_mode": {
+    "description": "记忆存储模式",
+    "type": "string",
+    "options": ["simple", "conventional"],
+    "default": "conventional",
+    "hint": "simple=每个用户独立记忆（隔离）；conventional=所有用户共享记忆（互通）"
+  },
+  "互通_scope": {
+    "description": "群聊与私聊互通范围",
+    "type": "string",
+    "options": ["none", "private", "group", "all"],
+    "default": "none",
+    "hint": "none=各自独立；private=仅私聊互通；group=仅群聊互通；all=全部互通"
+  },
+  "platform_isolation": {
+    "description": "是否按Bot实例隔离记忆数据",
+    "type": "bool",
+    "default": true,
+    "hint": "开启后，接入的多个OneBot（或多个QQ号）的记忆完全隔离，互不可见"
+  },
+  "inject_position": {
+    "description": "记忆注入位置",
+    "type": "string",
+    "options": ["system", "user"],
+    "default": "system",
+    "hint": "system=作为系统提示词注入；user=作为用户上下文第一条消息注入"
+  },
+  "time_format": {
+    "description": "时间显示格式",
+    "type": "string",
+    "default": "%m-%d %H:%M"
+  },
+  "debug_mode": {
+    "description": "调试模式",
+    "type": "bool",
+    "default": false,
+    "hint": "开启后在日志中输出详细的注入前后文本内容（仅用于调试，生产环境建议关闭）"
+  },
+  "log_max_length": {
+    "description": "日志最大长度",
+    "type": "int",
+    "default": 500,
+    "hint": "调试模式下日志内容的最大显示长度，超长会自动截断"
+  },
+  "cleanup_on_terminate": {
+    "description": "停用插件时自动清理数据",
+    "type": "bool",
+    "default": false,
+    "hint": "⚠️ 危险：开启后，当插件被停用/卸载/重载时，会自动删除所有记忆数据！仅测试时使用。"
+  }
+}
